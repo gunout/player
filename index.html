@@ -13,12 +13,14 @@
 		
 		<div class="video" style="width: 100%; height: 500px;max-width: 800px;">播放容器</div>
 		<script>
+    			var videoObject = {
+    				container: '.video', //容器的ID或className
+    				plug:'hls.js',//设置使用hls插件
+    				video:'http://eja.tv/?936cca43e050cd2c71ef5d18775c5f49.m3u8'
+    			};
+    			new ckplayer(videoObject);
+    		</script>
 			
-			var videoObject = {
-				container: '.video', 
-				poster:'',
-				video:'http://eja.tv/?936cca43e050cd2c71ef5d18775c5f49.m3u8'
-			};
 			var player=new ckplayer(videoObject)//player
 			
 			player.play(function(){
